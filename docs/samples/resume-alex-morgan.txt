@@ -1,0 +1,35 @@
+Alex Morgan
+Chicago, IL • alex.morgan@example.com • github.com/alexmorgan-dev
+
+PROFESSIONAL SUMMARY
+Full-stack developer with 4 years of experience building web applications with React, Node.js and SQL databases, from design through deployment and support.
+
+TECHNICAL SKILLS
+Languages: JavaScript, TypeScript, Python, SQL, HTML, CSS
+Frontend: React, Redux, Tailwind CSS, Material UI, Jest, React Testing Library
+Backend: Node.js, Express, REST APIs, JWT authentication
+Databases: PostgreSQL, MySQL, MongoDB, Redis
+Cloud and tools: AWS (EC2, S3, Lambda), Docker, GitHub Actions, Jira
+
+WORK EXPERIENCE
+Software Engineer, Northwind Logistics, Chicago, IL (Mar 2023 - Present)
+• Built a shipment tracking dashboard in React and TypeScript used by 300 dispatchers, replacing three spreadsheet-based reports.
+• Designed REST APIs in Node.js and Express for orders, carriers and delivery events, with request validation and role-based access.
+• Modeled order and shipment data in PostgreSQL and added indexes that cut the slowest report query from 9 seconds to under 1 second.
+• Set up GitHub Actions pipelines that run tests and deploy Docker containers to AWS EC2 on every merge to main.
+• Added Redis caching for carrier rate lookups, reducing calls to a paid third-party API by about 40 percent.
+• Reviewed pull requests and wrote onboarding guides for two new team members.
+
+Junior Web Developer, Lakeview Health Partners, Evanston, IL (Jun 2021 - Feb 2023)
+• Developed patient appointment scheduling screens in React with form validation and accessible components.
+• Built Express endpoints for appointments and reminders, storing data in MySQL.
+• Followed HIPAA access-control rules when handling patient records and audit logs.
+• Wrote unit tests with Jest and React Testing Library, raising coverage of the scheduling module to 80 percent.
+• Fixed production bugs reported by clinic staff and documented each fix in Jira.
+
+PROJECTS
+Recipe Finder: a React app that searches recipes by ingredient using a public API, with saved favorites in MongoDB.
+Budget Bot: a Python script that reads bank CSV files and sends a weekly spending summary by email.
+
+EDUCATION
+B.S. in Computer Science, University of Illinois Chicago, 2021

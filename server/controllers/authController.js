@@ -1,0 +1,45 @@
+const bcrypt = require('bcryptjs');
+const { z } = require('zod');
+const User = require('../models/User');
+const Resume = require('../models/Resume');
+const Job = require('../models/Job');
+const { signToken } = require('../middleware/auth');
+const { HttpError } = require('../middleware/errors');
+
+const email = z.email('Enter a valid email address.').transform((s) => s.toLowerCase().trim());
+const password = z.string().min(8, 'Password must be at least 8 characters.').max(100);
+
+const registerSchema = z.object({ name: z.string().trim().min(1, 'Name is required.').max(60), email, password });
+const loginSchema = z.object({ email, password: z.string().min(1, 'Password is required.') });
+
+const session = (user) => ({ token: signToken(user._id), user: user.toPublic() });
+
+async function register(req, res) {
+  const data = registerSchema.parse(req.body);
+  if (await User.exists({ email: data.email })) throw new HttpError(409, 'An account with this email already exists.');
+  const user = await User.create({ name: data.name, email: data.email, passwordHash: await bcrypt.hash(data.password, 12) });
+  res.status(201).json(session(user));
+}
+
+async function login(req, res) {
+  const data = loginSchema.parse(req.body);
+  const user = await User.findOne({ email: data.email }).select('+passwordHash');
+  // Same message for unknown email and wrong password, so attackers can't find out which emails exist.
+  if (!user || !(await bcrypt.compare(data.password, user.passwordHash))) {
+    throw new HttpError(401, 'Email or password is incorrect.');
+  }
+  res.json(session(user));
+}
+
+async function me(req, res) {
+  const user = await User.findById(req.userId);
+  if (!user) throw new HttpError(401, 'Please log in.');
+  res.json({ user: user.toPublic() });
+}
+
+async function deleteAccount(req, res) {
+  await Promise.all([Job.deleteMany({ user: req.userId }), Resume.deleteOne({ user: req.userId }), User.deleteOne({ _id: req.userId })]);
+  res.status(204).end();
+}
+
+module.exports = { register, login, me, deleteAccount };

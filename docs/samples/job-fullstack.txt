@@ -1,0 +1,25 @@
+Senior Full Stack Engineer - Brightline Health (Remote, US)
+
+Brightline Health builds care-coordination software used by 400+ clinics. We're looking for a Senior Full Stack Engineer to join our Patient Platform team.
+
+What you'll do
+- Build and maintain features across our React/TypeScript front end and Node.js services
+- Design REST and GraphQL APIs used by web and mobile clients
+- Model data in PostgreSQL and tune slow queries
+- Deploy and operate services on AWS using Docker and Kubernetes
+- Mentor junior engineers and take part in code reviews
+
+What we're looking for
+- 5+ years of professional software development experience
+- Strong experience with React and TypeScript
+- Experience building backend services with Node.js
+- Experience with relational databases (PostgreSQL preferred)
+- Familiarity with HIPAA or other healthcare compliance requirements
+- Experience with CI/CD pipelines
+
+Nice to have
+- Kubernetes
+- GraphQL
+- Experience mentoring other engineers
+
+Candidates must be authorized to work in the United States. We are unable to sponsor visas for this role.

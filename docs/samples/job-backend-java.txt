@@ -1,0 +1,25 @@
+Backend Engineer (Java / Spring Boot) - Fernway Payments, Austin, TX (Hybrid)
+
+Fernway Payments processes card and ACH payments for 20,000 small businesses. Our Platform team builds the services behind payouts, refunds and merchant onboarding.
+
+Responsibilities
+- Design and build Java microservices with Spring Boot
+- Build event-driven workflows with Apache Kafka
+- Own PostgreSQL schemas and write efficient SQL
+- Write unit and integration tests with JUnit
+- Run services on AWS with Docker and Kubernetes
+- Participate in on-call rotation for production systems
+
+Requirements
+- 3+ years of backend development experience
+- Strong Java and Spring Boot skills
+- Experience with relational databases, ideally PostgreSQL
+- Experience designing REST APIs
+- Experience with message queues such as Kafka or RabbitMQ
+
+Preferred
+- Payments or fintech experience
+- Kubernetes
+- Observability tools such as Datadog or Grafana
+
+We sponsor H-1B visas for qualified candidates.

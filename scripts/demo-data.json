@@ -1,0 +1,461 @@
+{
+  "resume": {
+    "fileName": "resume-alex-morgan.txt",
+    "text": "Alex Morgan\nChicago, IL • alex.morgan@example.com • github.com/alexmorgan-dev\n\nPROFESSIONAL SUMMARY\nFull-stack developer with 4 years of experience building web applications with React, Node.js and SQL databases, from design through deployment and support.\n\nTECHNICAL SKILLS\nLanguages: JavaScript, TypeScript, Python, SQL, HTML, CSS\nFrontend: React, Redux, Tailwind CSS, Material UI, Jest, React Testing Library\nBackend: Node.js, Express, REST APIs, JWT authentication\nDatabases: PostgreSQL, MySQL, MongoDB, Redis\nCloud and tools: AWS (EC2, S3, Lambda), Docker, GitHub Actions, Jira\n\nWORK EXPERIENCE\nSoftware Engineer, Northwind Logistics, Chicago, IL (Mar 2023 - Present)\n• Built a shipment tracking dashboard in React and TypeScript used by 300 dispatchers, replacing three spreadsheet-based reports.\n• Designed REST APIs in Node.js and Express for orders, carriers and delivery events, with request validation and role-based access.\n• Modeled order and shipment data in PostgreSQL and added indexes that cut the slowest report query from 9 seconds to under 1 second.\n• Set up GitHub Actions pipelines that run tests and deploy Docker containers to AWS EC2 on every merge to main.\n• Added Redis caching for carrier rate lookups, reducing calls to a paid third-party API by about 40 percent.\n• Reviewed pull requests and wrote onboarding guides for two new team members.\n\nJunior Web Developer, Lakeview Health Partners, Evanston, IL (Jun 2021 - Feb 2023)\n• Developed patient appointment scheduling screens in React with form validation and accessible components.\n• Built Express endpoints for appointments and reminders, storing data in MySQL.\n• Followed HIPAA access-control rules when handling patient records and audit logs.\n• Wrote unit tests with Jest and React Testing Library, raising coverage of the scheduling module to 80 percent.\n• Fixed production bugs reported by clinic staff and documented each fix in Jira.\n\nPROJECTS\nRecipe Finder: a React app that searches recipes by ingredient using a public API, with saved favorites in MongoDB.\nBudget Bot: a Python script that reads bank CSV files and sends a weekly spending summary by email.\n\nEDUCATION\nB.S. in Computer Science, University of Illinois Chicago, 2021\n"
+  },
+  "jobs": [
+    {
+      "title": "Senior Full Stack Engineer",
+      "company": "Brightline Health",
+      "url": "https://example.com/jobs/brightline-senior-fullstack",
+      "status": "interview",
+      "description": "Senior Full Stack Engineer - Brightline Health (Remote, US)\n\nBrightline Health builds care-coordination software used by 400+ clinics. We're looking for a Senior Full Stack Engineer to join our Patient Platform team.\n\nWhat you'll do\n- Build and maintain features across our React/TypeScript front end and Node.js services\n- Design REST and GraphQL APIs used by web and mobile clients\n- Model data in PostgreSQL and tune slow queries\n- Deploy and operate services on AWS using Docker and Kubernetes\n- Mentor junior engineers and take part in code reviews\n\nWhat we're looking for\n- 5+ years of professional software development experience\n- Strong experience with React and TypeScript\n- Experience building backend services with Node.js\n- Experience with relational databases (PostgreSQL preferred)\n- Familiarity with HIPAA or other healthcare compliance requirements\n- Experience with CI/CD pipelines\n\nNice to have\n- Kubernetes\n- GraphQL\n- Experience mentoring other engineers\n\nCandidates must be authorized to work in the United States. We are unable to sponsor visas for this role.\n",
+      "details": {
+        "location": "Remote, US",
+        "seniority": "Senior",
+        "summary": "Brightline Health builds care-coordination software used by 400+ clinics. We're looking for a Senior Full Stack Engineer to join our Patient Platform team.",
+        "workType": "remote",
+        "sponsorship": "no",
+        "sponsorshipQuote": "Candidates must be authorized to work in the United States. We are unable to sponsor visas for this role.",
+        "requirements": [
+          {
+            "skill": "5+ years of professional software development experience",
+            "importance": "required"
+          },
+          {
+            "skill": "Strong experience with React and TypeScript",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience building backend services with Node.js",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with relational databases (PostgreSQL preferred)",
+            "importance": "required"
+          },
+          {
+            "skill": "Familiarity with HIPAA or other healthcare compliance requirements",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with CI/CD pipelines",
+            "importance": "required"
+          },
+          {
+            "skill": "Kubernetes",
+            "importance": "nice"
+          },
+          {
+            "skill": "GraphQL",
+            "importance": "nice"
+          },
+          {
+            "skill": "Experience mentoring other engineers",
+            "importance": "nice"
+          }
+        ],
+        "yearsRequired": 5
+      },
+      "match": {
+        "score": 73,
+        "items": [
+          {
+            "skill": "5+ years of professional software development experience",
+            "importance": "required",
+            "verdict": "missing",
+            "explanation": "No bullet states 5+ years of software development experience.",
+            "evidence": []
+          },
+          {
+            "skill": "Strong experience with React and TypeScript",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 4 explicitly mentions building with React and TypeScript.",
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "skill": "Experience building backend services with Node.js",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 5 describes designing REST APIs using Node.js.",
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "skill": "Experience with relational databases (PostgreSQL preferred)",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 6 shows work with PostgreSQL, a relational database.",
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "skill": "Familiarity with HIPAA or other healthcare compliance requirements",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 13 states following HIPAA access‑control rules.",
+            "evidence": [
+              13
+            ]
+          },
+          {
+            "skill": "Experience with CI/CD pipelines",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 7 details setting up GitHub Actions CI/CD pipelines.",
+            "evidence": [
+              7
+            ]
+          },
+          {
+            "skill": "Kubernetes",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "No bullet mentions Kubernetes.",
+            "evidence": []
+          },
+          {
+            "skill": "GraphQL",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "No bullet mentions GraphQL.",
+            "evidence": []
+          },
+          {
+            "skill": "Experience mentoring other engineers",
+            "importance": "nice",
+            "verdict": "met",
+            "explanation": "Bullet 9 describes reviewing PRs and onboarding new team members.",
+            "evidence": [
+              9
+            ]
+          }
+        ],
+        "strengths": [
+          "Strong experience with React and TypeScript",
+          "Experience building backend services with Node.js",
+          "Experience with relational databases (PostgreSQL preferred)",
+          "Familiarity with HIPAA or other healthcare compliance requirements",
+          "Experience with CI/CD pipelines",
+          "Experience mentoring other engineers"
+        ],
+        "gaps": [
+          "5+ years of professional software development experience"
+        ]
+      },
+      "tailored": [
+        {
+          "chunk": 5,
+          "original": "Designed REST APIs in Node.js and Express for orders, carriers and delivery events, with request validation and role-based access.",
+          "rewritten": "Engineered secure REST APIs with Node.js and Express for orders, carriers, and delivery events, incorporating request validation and role‑based access controls.",
+          "reason": "Lead with engineering action and highlight Node.js/Express experience, aligning with backend service requirements.",
+          "newTerms": []
+        },
+        {
+          "chunk": 14,
+          "original": "Wrote unit tests with Jest and React Testing Library, raising coverage of the scheduling module to 80 percent.",
+          "rewritten": "Implemented unit tests using Jest and React Testing Library, boosting scheduling module coverage to 80 percent.",
+          "reason": "Starts with implementation verb and emphasizes testing expertise relevant to CI/CD and quality standards.",
+          "newTerms": []
+        },
+        {
+          "chunk": 12,
+          "original": "Built Express endpoints for appointments and reminders, storing data in MySQL.",
+          "rewritten": "Developed Express endpoints for appointments and reminders, persisting data in MySQL relational database.",
+          "reason": "Highlights backend development and relational database experience, matching PostgreSQL preference.",
+          "newTerms": []
+        },
+        {
+          "chunk": 9,
+          "original": "Reviewed pull requests and wrote onboarding guides for two new team members.",
+          "rewritten": "Conducted pull‑request reviews and authored onboarding guides for two new engineers.",
+          "reason": "Focuses on mentorship and code‑review responsibilities, key for senior engineering role.",
+          "newTerms": []
+        },
+        {
+          "chunk": 4,
+          "original": "Built a shipment tracking dashboard in React and TypeScript used by 300 dispatchers, replacing three spreadsheet-based reports.",
+          "rewritten": "Created a shipment‑tracking dashboard in React with TypeScript, serving 300 dispatchers and replacing three spreadsheet reports.",
+          "reason": "Emphasizes React/TypeScript front‑end expertise and impact, aligning with senior full‑stack expectations.",
+          "newTerms": []
+        },
+        {
+          "chunk": 16,
+          "original": "Recipe Finder: a React app that searches recipes by ingredient using a public API, with saved favorites in MongoDB.",
+          "rewritten": "Built a React recipe‑finder app that queries a public API by ingredient and stores user favorites in MongoDB.",
+          "reason": "Starts with building verb, showcases React skills; retains original tech stack without adding new details.",
+          "newTerms": []
+        }
+      ],
+      "coverLetter": "Dear Hiring Manager,\n\nI am applying for the Senior Full Stack Engineer position on the Patient Platform team at Brightline Health. My experience building full‑stack web applications aligns with the technical needs of the role.\n\nI built a shipment tracking dashboard in React and TypeScript that served 300 dispatchers, replacing three spreadsheet‑based reports. I also designed REST APIs in Node.js and Express with request validation and role‑based access, and modeled order and shipment data in PostgreSQL, adding indexes that reduced the slowest report query from 9 seconds to under 1 second. In addition, I followed HIPAA access‑control rules when handling patient records and audit logs, set up GitHub Actions pipelines for testing and Docker deployment to AWS EC2, and reviewed pull requests while writing onboarding guides for new team members.\n\nThank you for considering my application. I look forward to the possibility of discussing how my background can contribute to Brightline Health’s patient platform.\n\nSincerely,\nAlex Morgan"
+    },
+    {
+      "title": "Frontend Developer (React)",
+      "company": "Pinecrest Learning",
+      "url": "https://example.com/jobs/pinecrest-frontend",
+      "status": "applied",
+      "description": "Frontend Developer (React) - Pinecrest Learning, Remote (US)\n\nPinecrest Learning makes reading apps for elementary schools. We're hiring a Frontend Developer to build accessible, fast learning experiences for students and teachers.\n\nWhat you'll do\n- Build new features in React and TypeScript\n- Turn Figma designs into accessible, responsive components\n- Write tests with Jest and React Testing Library\n- Work with our Node.js API team on data contracts\n- Improve page load performance on low-end school devices\n\nYou have\n- 2+ years building production React applications\n- Strong TypeScript skills\n- Experience with accessibility (WCAG 2.1)\n- Experience with automated testing\n- Comfort working with REST APIs\n\nBonus\n- Next.js\n- Experience in education technology\n- Storybook or a design system\n\nThis is a remote role open to candidates in the United States.\n",
+      "details": {
+        "location": "Remote (US)",
+        "seniority": "unknown",
+        "summary": "Build accessible, fast learning experiences for students and teachers using React, TypeScript, and automated testing.",
+        "workType": "remote",
+        "sponsorship": "unknown",
+        "sponsorshipQuote": "",
+        "requirements": [
+          {
+            "skill": "2+ years building production React applications",
+            "importance": "required"
+          },
+          {
+            "skill": "Strong TypeScript skills",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with accessibility (WCAG 2.1)",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with automated testing",
+            "importance": "required"
+          },
+          {
+            "skill": "Comfort working with REST APIs",
+            "importance": "required"
+          },
+          {
+            "skill": "Next.js",
+            "importance": "nice"
+          },
+          {
+            "skill": "Experience in education technology",
+            "importance": "nice"
+          },
+          {
+            "skill": "Storybook or a design system",
+            "importance": "nice"
+          }
+        ],
+        "yearsRequired": 2
+      },
+      "match": {
+        "score": 65,
+        "items": [
+          {
+            "skill": "2+ years building production React applications",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 1 states 4 years building React applications.",
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "skill": "Strong TypeScript skills",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 4 demonstrates building a dashboard using TypeScript, and bullet 2 lists TypeScript skill.",
+            "evidence": [
+              4,
+              2
+            ]
+          },
+          {
+            "skill": "Experience with accessibility (WCAG 2.1)",
+            "importance": "required",
+            "verdict": "missing",
+            "explanation": "No bullet mentions accessibility or WCAG standards.",
+            "evidence": []
+          },
+          {
+            "skill": "Experience with automated testing",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 14 describes writing unit tests with Jest and RTL, and bullet 7 shows CI pipelines running tests.",
+            "evidence": [
+              14,
+              7
+            ]
+          },
+          {
+            "skill": "Comfort working with REST APIs",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 5 details designing REST APIs, confirming comfort with them.",
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "skill": "Next.js",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "Resume does not reference Next.js.",
+            "evidence": []
+          },
+          {
+            "skill": "Experience in education technology",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "No bullet indicates work in education technology.",
+            "evidence": []
+          },
+          {
+            "skill": "Storybook or a design system",
+            "importance": "nice",
+            "verdict": "partial",
+            "explanation": "Bullet 2 lists Material UI, a design system component library, indicating related experience.",
+            "evidence": [
+              2
+            ]
+          }
+        ],
+        "strengths": [
+          "2+ years building production React applications",
+          "Strong TypeScript skills",
+          "Experience with automated testing",
+          "Comfort working with REST APIs"
+        ],
+        "gaps": [
+          "Experience with accessibility (WCAG 2.1)"
+        ]
+      }
+    },
+    {
+      "title": "Backend Engineer (Java / Spring Boot)",
+      "company": "Fernway Payments",
+      "url": "https://example.com/jobs/fernway-backend",
+      "status": "saved",
+      "description": "Backend Engineer (Java / Spring Boot) - Fernway Payments, Austin, TX (Hybrid)\n\nFernway Payments processes card and ACH payments for 20,000 small businesses. Our Platform team builds the services behind payouts, refunds and merchant onboarding.\n\nResponsibilities\n- Design and build Java microservices with Spring Boot\n- Build event-driven workflows with Apache Kafka\n- Own PostgreSQL schemas and write efficient SQL\n- Write unit and integration tests with JUnit\n- Run services on AWS with Docker and Kubernetes\n- Participate in on-call rotation for production systems\n\nRequirements\n- 3+ years of backend development experience\n- Strong Java and Spring Boot skills\n- Experience with relational databases, ideally PostgreSQL\n- Experience designing REST APIs\n- Experience with message queues such as Kafka or RabbitMQ\n\nPreferred\n- Payments or fintech experience\n- Kubernetes\n- Observability tools such as Datadog or Grafana\n\nWe sponsor H-1B visas for qualified candidates.\n",
+      "details": {
+        "location": "Austin, TX",
+        "seniority": "mid",
+        "summary": "Design and build Java microservices with Spring Boot, event‑driven workflows with Apache Kafka, PostgreSQL schemas, unit and integration tests, run services on AWS with Docker and Kubernetes, participate in on‑call rotation.",
+        "workType": "hybrid",
+        "sponsorship": "yes",
+        "sponsorshipQuote": "We sponsor H-1B visas for qualified candidates.",
+        "requirements": [
+          {
+            "skill": "3+ years of backend development experience",
+            "importance": "required"
+          },
+          {
+            "skill": "Strong Java and Spring Boot skills",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with relational databases, ideally PostgreSQL",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience designing REST APIs",
+            "importance": "required"
+          },
+          {
+            "skill": "Experience with message queues such as Kafka or RabbitMQ",
+            "importance": "required"
+          },
+          {
+            "skill": "Payments or fintech experience",
+            "importance": "nice"
+          },
+          {
+            "skill": "Kubernetes",
+            "importance": "nice"
+          },
+          {
+            "skill": "Observability tools such as Datadog or Grafana",
+            "importance": "nice"
+          }
+        ],
+        "yearsRequired": 3
+      },
+      "match": {
+        "score": 50,
+        "items": [
+          {
+            "skill": "3+ years of backend development experience",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 1 states 4 years of development experience, exceeding 3 years.",
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "skill": "Strong Java and Spring Boot skills",
+            "importance": "required",
+            "verdict": "missing",
+            "explanation": "No bullet mentions Java or Spring Boot.",
+            "evidence": []
+          },
+          {
+            "skill": "Experience with relational databases, ideally PostgreSQL",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullet 2 lists PostgreSQL and bullet 12 shows relational MySQL usage.",
+            "evidence": [
+              2,
+              12
+            ]
+          },
+          {
+            "skill": "Experience designing REST APIs",
+            "importance": "required",
+            "verdict": "met",
+            "explanation": "Bullets 5, 12 and 2 describe designing REST APIs.",
+            "evidence": [
+              5,
+              12,
+              2
+            ]
+          },
+          {
+            "skill": "Experience with message queues such as Kafka or RabbitMQ",
+            "importance": "required",
+            "verdict": "missing",
+            "explanation": "No bullet references Kafka, RabbitMQ, or any message queue.",
+            "evidence": []
+          },
+          {
+            "skill": "Payments or fintech experience",
+            "importance": "nice",
+            "verdict": "partial",
+            "explanation": "Bullet 17 involves processing bank data, a fintech‑related task but not direct payments work.",
+            "evidence": [
+              17
+            ]
+          },
+          {
+            "skill": "Kubernetes",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "Kubernetes is not mentioned in any bullet.",
+            "evidence": []
+          },
+          {
+            "skill": "Observability tools such as Datadog or Grafana",
+            "importance": "nice",
+            "verdict": "missing",
+            "explanation": "Observability tools like Datadog or Grafana are not referenced.",
+            "evidence": []
+          }
+        ],
+        "strengths": [
+          "3+ years of backend development experience",
+          "Experience with relational databases, ideally PostgreSQL",
+          "Experience designing REST APIs"
+        ],
+        "gaps": [
+          "Strong Java and Spring Boot skills",
+          "Experience with message queues such as Kafka or RabbitMQ"
+        ]
+      }
+    }
+  ]
+}

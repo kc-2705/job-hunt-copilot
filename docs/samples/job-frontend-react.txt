@@ -1,0 +1,24 @@
+Frontend Developer (React) - Pinecrest Learning, Remote (US)
+
+Pinecrest Learning makes reading apps for elementary schools. We're hiring a Frontend Developer to build accessible, fast learning experiences for students and teachers.
+
+What you'll do
+- Build new features in React and TypeScript
+- Turn Figma designs into accessible, responsive components
+- Write tests with Jest and React Testing Library
+- Work with our Node.js API team on data contracts
+- Improve page load performance on low-end school devices
+
+You have
+- 2+ years building production React applications
+- Strong TypeScript skills
+- Experience with accessibility (WCAG 2.1)
+- Experience with automated testing
+- Comfort working with REST APIs
+
+Bonus
+- Next.js
+- Experience in education technology
+- Storybook or a design system
+
+This is a remote role open to candidates in the United States.
