@@ -150,7 +150,8 @@ async function matchResume(requirements, chunks) {
       'only part of it, "missing" if none of them show it. Do not assume skills that are not written. ' +
       'Industry experience (payments, healthcare, education...) counts only when a bullet shows work in that industry, ' +
       'not a passing mention. Years of experience count only when a bullet states them. ' +
-      'evidence: the bullet numbers that support your verdict (empty when missing). explanation: one short sentence.',
+      'evidence: the bullet numbers that support your verdict (empty when missing). explanation: one short sentence about the ' +
+      'experience, written to the candidate as "you"; never mention bullet numbers.',
     user: `Requirements:\n${reqList}\n\nResume bullets:\n${bulletList}`,
   });
 
@@ -164,7 +165,7 @@ async function matchResume(requirements, chunks) {
       skill: c.skill,
       importance: c.importance,
       verdict: verdict !== 'missing' && evidence.length === 0 ? 'partial' : verdict,
-      explanation: a?.explanation ?? 'Not assessed.',
+      explanation: a?.explanation ? a.explanation.charAt(0).toUpperCase() + a.explanation.slice(1) : 'Not assessed.',
       evidence,
     };
   });
@@ -240,7 +241,7 @@ async function tailorBullets(job, chunks) {
       'You improve resume bullets for a specific job. Rewrite each bullet so it leads with what matters most for this job ' +
       'and uses the job post\'s wording where it truthfully applies. Strict rules: keep every fact true to the original; ' +
       'never add tools, numbers, metrics, team sizes or results that are not in the original bullet; keep it to one ' +
-      'sentence under 35 words; start with a strong past-tense verb. reason: a few words on what changed.',
+      'sentence under 35 words; start with a strong past-tense verb. reason: what changed, in 3 to 6 words.',
     user:
       `Job: ${job.title} at ${job.company}\nKey requirements: ${wanted}\n\n` +
       `Bullets:\n${picked.map((c) => `${c.i}. ${c.text}`).join('\n')}`,

@@ -64,15 +64,17 @@
             "skill": "5+ years of professional software development experience",
             "importance": "required",
             "verdict": "missing",
-            "explanation": "No bullet states 5+ years of software development experience.",
+            "explanation": "You have 4 years of development experience, which is less than the required 5+ years.",
             "evidence": []
           },
           {
             "skill": "Strong experience with React and TypeScript",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 4 explicitly mentions building with React and TypeScript.",
+            "explanation": "You have strong experience with React and TypeScript, as shown by multiple projects.",
             "evidence": [
+              1,
+              2,
               4
             ]
           },
@@ -80,34 +82,39 @@
             "skill": "Experience building backend services with Node.js",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 5 describes designing REST APIs using Node.js.",
+            "explanation": "You have built backend services using Node.js.",
             "evidence": [
-              5
+              5,
+              1,
+              2
             ]
           },
           {
             "skill": "Experience with relational databases (PostgreSQL preferred)",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 6 shows work with PostgreSQL, a relational database.",
+            "explanation": "You have worked with relational databases, including PostgreSQL.",
             "evidence": [
-              6
+              6,
+              2
             ]
           },
           {
             "skill": "Familiarity with HIPAA or other healthcare compliance requirements",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 13 states following HIPAA access‑control rules.",
+            "explanation": "You are familiar with HIPAA compliance requirements.",
             "evidence": [
-              13
+              13,
+              11,
+              15
             ]
           },
           {
             "skill": "Experience with CI/CD pipelines",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 7 details setting up GitHub Actions CI/CD pipelines.",
+            "explanation": "You have set up CI/CD pipelines using GitHub Actions.",
             "evidence": [
               7
             ]
@@ -116,21 +123,21 @@
             "skill": "Kubernetes",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "No bullet mentions Kubernetes.",
+            "explanation": "You have not listed any experience with Kubernetes.",
             "evidence": []
           },
           {
             "skill": "GraphQL",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "No bullet mentions GraphQL.",
+            "explanation": "You have not listed any experience with GraphQL.",
             "evidence": []
           },
           {
             "skill": "Experience mentoring other engineers",
             "importance": "nice",
             "verdict": "met",
-            "explanation": "Bullet 9 describes reviewing PRs and onboarding new team members.",
+            "explanation": "You have mentored other engineers through code reviews and onboarding guides.",
             "evidence": [
               9
             ]
@@ -152,47 +159,50 @@
         {
           "chunk": 5,
           "original": "Designed REST APIs in Node.js and Express for orders, carriers and delivery events, with request validation and role-based access.",
-          "rewritten": "Engineered secure REST APIs with Node.js and Express for orders, carriers, and delivery events, incorporating request validation and role‑based access controls.",
-          "reason": "Lead with engineering action and highlight Node.js/Express experience, aligning with backend service requirements.",
-          "newTerms": []
+          "rewritten": "Designed secure REST APIs in Node.js/Express for orders, carriers, and delivery events with request validation and role‑based access, aligning with HIPAA‑style data protection.",
+          "reason": "Emphasized API design for healthcare compliance",
+          "newTerms": [
+            "node.js/express",
+            "hipaa"
+          ]
         },
         {
           "chunk": 14,
           "original": "Wrote unit tests with Jest and React Testing Library, raising coverage of the scheduling module to 80 percent.",
-          "rewritten": "Implemented unit tests using Jest and React Testing Library, boosting scheduling module coverage to 80 percent.",
-          "reason": "Starts with implementation verb and emphasizes testing expertise relevant to CI/CD and quality standards.",
+          "rewritten": "Wrote unit tests using Jest and React Testing Library, raising the scheduling module’s test coverage to 80 percent.",
+          "reason": "Highlighted testing expertise",
           "newTerms": []
         },
         {
           "chunk": 12,
           "original": "Built Express endpoints for appointments and reminders, storing data in MySQL.",
-          "rewritten": "Developed Express endpoints for appointments and reminders, persisting data in MySQL relational database.",
-          "reason": "Highlights backend development and relational database experience, matching PostgreSQL preference.",
+          "rewritten": "Built Express endpoints for appointments and reminders, persisting data in MySQL.",
+          "reason": "Focused on backend service creation",
           "newTerms": []
         },
         {
           "chunk": 9,
           "original": "Reviewed pull requests and wrote onboarding guides for two new team members.",
-          "rewritten": "Conducted pull‑request reviews and authored onboarding guides for two new engineers.",
-          "reason": "Focuses on mentorship and code‑review responsibilities, key for senior engineering role.",
+          "rewritten": "Reviewed pull requests and authored onboarding guides for two new engineers.",
+          "reason": "Showcased mentorship and code review",
           "newTerms": []
         },
         {
           "chunk": 4,
           "original": "Built a shipment tracking dashboard in React and TypeScript used by 300 dispatchers, replacing three spreadsheet-based reports.",
-          "rewritten": "Created a shipment‑tracking dashboard in React with TypeScript, serving 300 dispatchers and replacing three spreadsheet reports.",
-          "reason": "Emphasizes React/TypeScript front‑end expertise and impact, aligning with senior full‑stack expectations.",
+          "rewritten": "Built a shipment‑tracking dashboard in React and TypeScript used by 300 dispatchers, replacing three spreadsheet‑based reports.",
+          "reason": "Prioritized React/TypeScript dashboard impact",
           "newTerms": []
         },
         {
           "chunk": 16,
           "original": "Recipe Finder: a React app that searches recipes by ingredient using a public API, with saved favorites in MongoDB.",
-          "rewritten": "Built a React recipe‑finder app that queries a public API by ingredient and stores user favorites in MongoDB.",
-          "reason": "Starts with building verb, showcases React skills; retains original tech stack without adding new details.",
+          "rewritten": "Developed a React recipe‑finder app that queries a public API by ingredient and stores saved favorites in MongoDB.",
+          "reason": "Clarified full‑stack project scope",
           "newTerms": []
         }
       ],
-      "coverLetter": "Dear Hiring Manager,\n\nI am applying for the Senior Full Stack Engineer position on the Patient Platform team at Brightline Health. My experience building full‑stack web applications aligns with the technical needs of the role.\n\nI built a shipment tracking dashboard in React and TypeScript that served 300 dispatchers, replacing three spreadsheet‑based reports. I also designed REST APIs in Node.js and Express with request validation and role‑based access, and modeled order and shipment data in PostgreSQL, adding indexes that reduced the slowest report query from 9 seconds to under 1 second. In addition, I followed HIPAA access‑control rules when handling patient records and audit logs, set up GitHub Actions pipelines for testing and Docker deployment to AWS EC2, and reviewed pull requests while writing onboarding guides for new team members.\n\nThank you for considering my application. I look forward to the possibility of discussing how my background can contribute to Brightline Health’s patient platform.\n\nSincerely,\nAlex Morgan"
+      "coverLetter": "Dear Hiring Manager,\n\nI am applying for the Senior Full Stack Engineer position on the Patient Platform team at Brightline Health. My four years of full‑stack development experience with React, Node.js, and SQL databases aligns with the technical needs of the role.\n\nI built a shipment tracking dashboard in React and TypeScript that is used by 300 dispatchers, replacing three spreadsheet‑based reports. I also designed REST APIs in Node.js and Express for orders, carriers, and delivery events, incorporating request validation and role‑based access. Additionally, I modeled order and shipment data in PostgreSQL and added indexes that reduced the slowest report query from nine seconds to under one second. In all projects I followed HIPAA access‑control rules when handling patient records and audit logs.\n\nThank you for considering my application. I look forward to the possibility of discussing how my background can contribute to Brightline Health’s patient platform.\n\nSincerely,\nAlex Morgan"
     },
     {
       "title": "Frontend Developer (React)",
@@ -244,13 +254,13 @@
         "yearsRequired": 2
       },
       "match": {
-        "score": 65,
+        "score": 69,
         "items": [
           {
             "skill": "2+ years building production React applications",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 1 states 4 years building React applications.",
+            "explanation": "You have 4 years building React applications, satisfying the 2+ years requirement.",
             "evidence": [
               1
             ]
@@ -259,24 +269,24 @@
             "skill": "Strong TypeScript skills",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 4 demonstrates building a dashboard using TypeScript, and bullet 2 lists TypeScript skill.",
+            "explanation": "Your work with React and TypeScript, especially the dashboard built in TypeScript, shows strong TypeScript skills.",
             "evidence": [
-              4,
-              2
+              2,
+              4
             ]
           },
           {
             "skill": "Experience with accessibility (WCAG 2.1)",
             "importance": "required",
             "verdict": "missing",
-            "explanation": "No bullet mentions accessibility or WCAG standards.",
+            "explanation": "Your resume does not mention any accessibility work such as WCAG 2.1.",
             "evidence": []
           },
           {
             "skill": "Experience with automated testing",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 14 describes writing unit tests with Jest and RTL, and bullet 7 shows CI pipelines running tests.",
+            "explanation": "You have written unit tests with Jest and set up CI pipelines that run tests, demonstrating automated testing experience.",
             "evidence": [
               14,
               7
@@ -286,30 +296,31 @@
             "skill": "Comfort working with REST APIs",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 5 details designing REST APIs, confirming comfort with them.",
+            "explanation": "You designed and built REST APIs in Node.js/Express, showing comfort with REST APIs.",
             "evidence": [
-              5
+              5,
+              12
             ]
           },
           {
             "skill": "Next.js",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "Resume does not reference Next.js.",
+            "explanation": "Your resume does not reference any work with Next.js.",
             "evidence": []
           },
           {
             "skill": "Experience in education technology",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "No bullet indicates work in education technology.",
+            "explanation": "There is no indication of experience in education technology on your resume.",
             "evidence": []
           },
           {
             "skill": "Storybook or a design system",
             "importance": "nice",
-            "verdict": "partial",
-            "explanation": "Bullet 2 lists Material UI, a design system component library, indicating related experience.",
+            "verdict": "met",
+            "explanation": "You list Material UI, a design system, indicating familiarity with design system tools.",
             "evidence": [
               2
             ]
@@ -319,7 +330,8 @@
           "2+ years building production React applications",
           "Strong TypeScript skills",
           "Experience with automated testing",
-          "Comfort working with REST APIs"
+          "Comfort working with REST APIs",
+          "Storybook or a design system"
         ],
         "gaps": [
           "Experience with accessibility (WCAG 2.1)"
@@ -382,7 +394,7 @@
             "skill": "3+ years of backend development experience",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 1 states 4 years of development experience, exceeding 3 years.",
+            "explanation": "You have 4 years of backend development experience.",
             "evidence": [
               1
             ]
@@ -391,42 +403,39 @@
             "skill": "Strong Java and Spring Boot skills",
             "importance": "required",
             "verdict": "missing",
-            "explanation": "No bullet mentions Java or Spring Boot.",
+            "explanation": "You have not listed Java or Spring Boot skills.",
             "evidence": []
           },
           {
             "skill": "Experience with relational databases, ideally PostgreSQL",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullet 2 lists PostgreSQL and bullet 12 shows relational MySQL usage.",
+            "explanation": "You have worked with PostgreSQL.",
             "evidence": [
-              2,
-              12
+              2
             ]
           },
           {
             "skill": "Experience designing REST APIs",
             "importance": "required",
             "verdict": "met",
-            "explanation": "Bullets 5, 12 and 2 describe designing REST APIs.",
+            "explanation": "You have designed REST APIs.",
             "evidence": [
-              5,
-              12,
-              2
+              5
             ]
           },
           {
             "skill": "Experience with message queues such as Kafka or RabbitMQ",
             "importance": "required",
             "verdict": "missing",
-            "explanation": "No bullet references Kafka, RabbitMQ, or any message queue.",
+            "explanation": "You have not mentioned any message queue experience.",
             "evidence": []
           },
           {
             "skill": "Payments or fintech experience",
             "importance": "nice",
             "verdict": "partial",
-            "explanation": "Bullet 17 involves processing bank data, a fintech‑related task but not direct payments work.",
+            "explanation": "You have built a fintech‑related script handling bank data.",
             "evidence": [
               17
             ]
@@ -435,14 +444,14 @@
             "skill": "Kubernetes",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "Kubernetes is not mentioned in any bullet.",
+            "explanation": "You have not listed Kubernetes experience.",
             "evidence": []
           },
           {
             "skill": "Observability tools such as Datadog or Grafana",
             "importance": "nice",
             "verdict": "missing",
-            "explanation": "Observability tools like Datadog or Grafana are not referenced.",
+            "explanation": "You have not listed observability tools like Datadog or Grafana.",
             "evidence": []
           }
         ],
