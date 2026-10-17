@@ -12,6 +12,8 @@
 
 An AI job search assistant. Paste a job post and it tells you how well your resume fits, **with the exact resume bullet that proves each point**, rewrites your bullets for the role without inventing anything, drafts a plain cover letter, and keeps every application on a drag-and-drop board.
 
+**Live demo: [job-hunt-copilot-web.onrender.com](https://job-hunt-copilot-web.onrender.com)**. Click **Log in**, then **Use the demo account**. It runs on Render's free plan, so if nobody has visited in a while, an opening screen shows while the server wakes up (up to a minute).
+
 ![Landing page](docs/screenshots/landing.png)
 
 ## What it does
@@ -61,6 +63,7 @@ Design choices worth calling out:
 | Front end | React 19, Vite, Ant Design 6, React Query, React Router |
 | Back end | Node.js, Express 5, MongoDB + Mongoose, Zod, JWT, bcrypt, Helmet, rate limiting, Multer |
 | AI | gpt-oss-120b / gpt-oss-20b via Groq (OpenAI-compatible API), Transformers.js embeddings, unpdf |
+| Hosting | Render: a static site for the web app (never sleeps) and a web service for the API, from one Blueprint (`render.yaml`) |
 | Tests | Node test runner, Supertest, mongodb-memory-server, a fake LLM (39 tests, including edge cases) |
 
 ## Run it
@@ -105,3 +108,12 @@ docs/samples/                Sample resume (fictional) and job posts
 ## Privacy
 
 Resumes are stored only in your account and are never used for training. Uploaded PDFs are read in memory and not saved to disk. Embeddings are computed on the server, and only the few bullets relevant to a requirement are sent to the language model.
+
+## Deploy on Render
+
+`render.yaml` is a Render Blueprint with two services:
+
+- **job-hunt-copilot-web**: the React app as a static site. Free static sites never sleep, so it opens instantly and shows an opening animation while it wakes the API.
+- **job-hunt-copilot**: the Node.js API. It sleeps after 15 idle minutes on the free plan. With `SEED_DEMO=true` it recreates the demo account each time it starts.
+
+In Render, choose **New → Blueprint**, pick this repo, and fill in `MONGO_URL` (a MongoDB Atlas connection string; allow access from anywhere in Atlas **Network Access**) and `GROQ_API_KEY`. Everything else is set automatically.
