@@ -16,7 +16,12 @@ module.exports = {
   jwtSecret: () => required('JWT_SECRET'),
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
   // Comma-separated list of front-end origins allowed to call the API.
-  clientOrigins: (process.env.CLIENT_URL || 'http://localhost:5173').split(',').map((s) => s.trim()),
+  // Render passes the website's bare service name, so https:// and .onrender.com are added when missing.
+  clientOrigins: (process.env.CLIENT_URL || 'http://localhost:5173')
+    .split(',')
+    .map((s) => s.trim().replace(/\/+$/, ''))
+    .filter(Boolean)
+    .map((s) => (/^https?:\/\//.test(s) ? s : `https://${s.includes('.') ? s : `${s}.onrender.com`}`)),
   // Any OpenAI-compatible chat API. Defaults to Groq's free tier running open-weight models.
   llm: {
     baseUrl: (process.env.LLM_BASE_URL || 'https://api.groq.com/openai/v1').replace(/\/$/, ''),
