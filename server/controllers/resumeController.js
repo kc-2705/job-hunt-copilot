@@ -40,7 +40,7 @@ async function save(req, res) {
   const resume = await Resume.findOneAndUpdate(
     { user: req.userId },
     { text, fileName, chunks },
-    { upsert: true, new: true, runValidators: true },
+    { upsert: true, returnDocument: 'after', runValidators: true },
   ).lean();
   res.json({ resume: view(resume) });
 }

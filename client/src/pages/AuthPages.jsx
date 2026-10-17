@@ -53,7 +53,7 @@ export function LoginPage() {
           <Input.Password autoComplete="current-password" />
         </Form.Item>
         <Button type="primary" htmlType="submit" block loading={loading}>Log in</Button>
-        <Button block style={{ marginTop: 8 }} onClick={() => form.setFieldsValue(DEMO)}>Use the demo account</Button>
+        <Button block style={{ marginTop: 8 }} disabled={loading} onClick={() => { form.setFieldsValue(DEMO); submit(DEMO); }}>Use the demo account</Button>
       </Form>
     </AuthShell>
   );

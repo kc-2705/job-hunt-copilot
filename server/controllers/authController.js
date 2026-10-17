@@ -6,7 +6,8 @@ const Job = require('../models/Job');
 const { signToken } = require('../middleware/auth');
 const { HttpError } = require('../middleware/errors');
 
-const email = z.email('Enter a valid email address.').transform((s) => s.toLowerCase().trim());
+// Trim first: emails pasted from elsewhere often carry a stray space.
+const email = z.preprocess((v) => (typeof v === 'string' ? v.trim().toLowerCase() : v), z.email('Enter a valid email address.'));
 const password = z.string().min(8, 'Password must be at least 8 characters.').max(100);
 
 const registerSchema = z.object({ name: z.string().trim().min(1, 'Name is required.').max(60), email, password });

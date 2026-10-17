@@ -1,4 +1,5 @@
 const llm = require('./llm');
+const { HttpError } = require('../middleware/errors');
 const { embed, topK } = require('./embeddings');
 
 // The job-search features. The pattern throughout: retrieve the relevant resume
@@ -36,6 +37,8 @@ const jobSchema = {
   required: ['title', 'company', 'summary', 'seniority', 'yearsRequired', 'location', 'workType', 'sponsorship', 'sponsorshipQuote', 'requirements'],
 };
 
+const WORK_AUTH = /sponsor|visa|authori[sz]ed to work|work authori[sz]ation|citizenship|green card|security clearance eligib/i;
+
 async function readJobPost(description) {
   const out = await llm.json({
     name: 'job_post',
@@ -46,11 +49,23 @@ async function readJobPost(description) {
       'requirements: 6 to 14 concrete skills or qualifications (technologies, practices, domain knowledge, degrees), ' +
       'each short (2 to 6 words). If a minimum number of years is stated, include it as a requirement such as ' +
       '"5+ years of software development". Mark "required" for must-haves and "nice" for preferred or bonus items. ' +
+      'Do not list work authorization, citizenship or visa sponsorship as a requirement. ' +
       'sponsorship: "no" if the post says it will not sponsor visas or requires citizenship / existing work authorization ' +
       'without sponsorship; "yes" if it offers sponsorship; otherwise "unknown". sponsorshipQuote: the exact sentence, or "". ' +
       'yearsRequired: the minimum years of experience as a number, or null. Use "" for anything not stated.',
     user: description.slice(0, 12000),
   });
+  // Models without strict JSON mode (e.g. some local ones) can return values outside the allowed lists.
+  const oneOf = (value, allowed) => (allowed.includes(value) ? value : 'unknown');
+  out.workType = oneOf(out.workType, ['remote', 'hybrid', 'onsite']);
+  out.sponsorship = oneOf(out.sponsorship, ['yes', 'no']);
+  const years = Number(out.yearsRequired);
+  out.yearsRequired = out.yearsRequired != null && Number.isFinite(years) ? years : null;
+  out.requirements = (out.requirements ?? [])
+    .filter((r) => typeof r?.skill === 'string')
+    // Work authorization is reported as sponsorship, not scored as a skill the resume should prove.
+    .filter((r) => !WORK_AUTH.test(r.skill))
+    .map((r) => ({ skill: r.skill.slice(0, 120), importance: r.importance === 'nice' ? 'nice' : 'required' }));
   // De-duplicate skills the model listed twice.
   const seen = new Set();
   out.requirements = out.requirements.filter((r) => {
@@ -227,10 +242,12 @@ async function tailorBullets(job, chunks) {
   // Pick the experience bullets most related to what this job asks for.
   const wanted = job.details.requirements.map((r) => r.skill).join(', ');
   const [query] = await embed([`${job.title}. ${wanted}`]);
-  const experience = chunks
-    .map((c, i) => ({ ...c, i }))
-    // Only real experience/project bullets: not the header, summary, skills list, education or job title lines.
-    .filter((c) => c.section && !/summary|profile|objective|skill|education|certif/i.test(c.section) && c.text.length > 60 && !isRoleLine(c.text));
+  // Only real experience/project bullets: not the header, summary, skills list, education or job title lines.
+  const candidates = chunks.map((c, i) => ({ ...c, i })).filter((c) => c.text.length > 60 && !isRoleLine(c.text));
+  let experience = candidates.filter((c) => c.section && !/summary|profile|objective|skill|education|certif/i.test(c.section));
+  // A pasted resume may have no section headings; then use every sentence-like line except comma-separated skill lists.
+  if (!experience.length) experience = candidates.filter((c) => (c.text.match(/,/g) ?? []).length < 5);
+  if (!experience.length) throw new HttpError(400, 'No experience bullets were found in your resume to tailor.');
   const picked = topK(query, experience, TAILOR_COUNT).map((m) => experience[m.i]);
 
   const out = await llm.json({

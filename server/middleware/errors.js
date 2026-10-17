@@ -30,6 +30,7 @@ function errorHandler(err, req, res, next) {
     return res.status(400).json({ message: err.code === 'LIMIT_FILE_SIZE' ? 'The file is too large (5 MB maximum).' : 'Upload failed. Please try again.' });
   }
   if (err?.type === 'entity.parse.failed') return res.status(400).json({ message: 'Request body is not valid JSON.' });
+  if (err?.type === 'entity.too.large') return res.status(413).json({ message: 'That is too large to send. Please shorten it and try again.' });
 
   console.error(err);
   return res.status(500).json({ message: 'Something went wrong on our side. Please try again.' });

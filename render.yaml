@@ -1,0 +1,21 @@
+# Render Blueprint: one web service that serves the API and the built React app.
+# MONGO_URL and GROQ_API_KEY are secrets: Render asks for them when you create the service.
+services:
+  - type: web
+    name: job-hunt-copilot
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SEED_DEMO
+        value: "true"

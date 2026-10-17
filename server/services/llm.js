@@ -10,12 +10,19 @@ async function call(body) {
   if (!env.llm.apiKey) throw new HttpError(503, 'The AI is not set up yet. Add GROQ_API_KEY to the .env file.');
 
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch(`${env.llm.baseUrl}/chat/completions`, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${env.llm.apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(env.llm.timeoutMs),
-    });
+    let res;
+    try {
+      res = await fetch(`${env.llm.baseUrl}/chat/completions`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${env.llm.apiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(env.llm.timeoutMs),
+      });
+    } catch (err) {
+      if (err?.name === 'TimeoutError') throw new HttpError(504, 'The AI took too long to answer. Please try again.');
+      console.error(`LLM request failed: ${err?.message}`);
+      throw new HttpError(502, "Couldn't reach the AI service. Please try again in a moment.");
+    }
 
     // The free tier allows a limited number of tokens per minute; wait and try again.
     if (res.status === 429 && attempt < MAX_RETRIES) {

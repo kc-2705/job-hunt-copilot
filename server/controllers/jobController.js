@@ -6,7 +6,8 @@ const User = require('../models/User');
 const { HttpError } = require('../middleware/errors');
 const copilot = require('../services/copilot');
 
-const link = z.union([z.url('Enter a valid link.'), z.literal('')]);
+// Only web links: a javascript: or data: link would run code when someone clicks it.
+const link = z.union([z.url({ protocol: /^https?$/, message: 'Enter a web link that starts with http:// or https://.' }), z.literal('')]);
 
 const createSchema = z.object({
   description: z.string().trim().min(200, 'Paste the full job post (at least a paragraph).').max(20000),
