@@ -8,7 +8,7 @@
 ![gpt-oss](https://img.shields.io/badge/LLM-gpt--oss%20(open%20weight)-412991)
 ![Groq](https://img.shields.io/badge/Inference-Groq-F55036)
 ![Transformers.js](https://img.shields.io/badge/Embeddings-Transformers.js-FFD21E?logo=huggingface&logoColor=black)
-![Tests](https://img.shields.io/badge/tests-18%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-39%20passing-brightgreen)
 
 An AI job search assistant. Paste a job post and it tells you how well your resume fits, **with the exact resume bullet that proves each point**, rewrites your bullets for the role without inventing anything, drafts a plain cover letter, and keeps every application on a drag-and-drop board.
 
@@ -61,7 +61,7 @@ Design choices worth calling out:
 | Front end | React 19, Vite, Ant Design 6, React Query, React Router |
 | Back end | Node.js, Express 5, MongoDB + Mongoose, Zod, JWT, bcrypt, Helmet, rate limiting, Multer |
 | AI | gpt-oss-120b / gpt-oss-20b via Groq (OpenAI-compatible API), Transformers.js embeddings, unpdf |
-| Tests | Node test runner, Supertest, mongodb-memory-server, a fake LLM (18 tests) |
+| Tests | Node test runner, Supertest, mongodb-memory-server, a fake LLM (39 tests, including edge cases) |
 
 ## Run it
 
