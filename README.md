@@ -10,6 +10,11 @@
 ![Transformers.js](https://img.shields.io/badge/Embeddings-Transformers.js-FFD21E?logo=huggingface&logoColor=black)
 ![Tests](https://img.shields.io/badge/tests-39%20passing-brightgreen)
 
+<a href="https://dev.to/kavyachowdary_immanni/job-hunt-copilot-stop-reading-job-posts-you-cant-apply-to-4a3j"><img src="docs/badges/hacktoberfest-2026-dev.png" alt="Hacktoberfest 2026 Challenge Completion badge from DEV" width="90" align="left"></a>
+
+**Hacktoberfest 2026 Challenge Completion (DEV).** Submitted to DEV's Hacktoberfest Open-Source AI Challenge, Week 2. Read the write-up: [Job Hunt Copilot: stop reading job posts you can't apply to](https://dev.to/kavyachowdary_immanni/job-hunt-copilot-stop-reading-job-posts-you-cant-apply-to-4a3j).
+<br clear="left">
+
 An AI job search assistant. Paste a job post and it tells you how well your resume fits, **with the exact resume bullet that proves each point**, rewrites your bullets for the role without inventing anything, drafts a plain cover letter, and keeps every application on a drag-and-drop board.
 
 **Live demo: [job-hunt-copilot-web.onrender.com](https://job-hunt-copilot-web.onrender.com)**. Click **Log in**, then **Use the demo account**. It runs on Render's free plan, so if nobody has visited in a while, an opening screen shows while the server wakes up (up to a minute).
